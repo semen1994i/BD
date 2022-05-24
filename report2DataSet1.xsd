@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="report2DataSet1" targetNamespace="http://tempuri.org/report2DataSet1.xsd" xmlns:mstns="http://tempuri.org/report2DataSet1.xsd" xmlns="http://tempuri.org/report2DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db22207ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db22207ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BD_6.Properties.Settings.GlobalReference.Default.db22207ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db22207ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tblPupil.txtPupilSurname, tblPupil.txtPupilName, tblPupil.datBirthday, tblPupil.txtAddress, tblSubject.txtSubjectName, tblTeacher.txtTeacherName, tblSubject.intSubjectVolume, tblLesson.datLessonDate, tblLesson.txtTheme, 
+                  tblMark.intMarkValue, tblMark.txtMarkComment
+FROM     tblTeacher INNER JOIN
+                  tblSubject ON tblTeacher.intTeacherId = tblSubject.intTeacherId INNER JOIN
+                  tblLesson ON tblSubject.intSubjectId = tblLesson.intSubjectId INNER JOIN
+                  tblMark ON tblLesson.intLessonId = tblMark.intLessonId INNER JOIN
+                  tblPupil ON tblMark.intPupilId = tblPupil.intPupilId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="txtPupilSurname" DataSetColumn="txtPupilSurname" />
+              <Mapping SourceColumn="txtPupilName" DataSetColumn="txtPupilName" />
+              <Mapping SourceColumn="datBirthday" DataSetColumn="datBirthday" />
+              <Mapping SourceColumn="txtAddress" DataSetColumn="txtAddress" />
+              <Mapping SourceColumn="txtSubjectName" DataSetColumn="txtSubjectName" />
+              <Mapping SourceColumn="txtTeacherName" DataSetColumn="txtTeacherName" />
+              <Mapping SourceColumn="intSubjectVolume" DataSetColumn="intSubjectVolume" />
+              <Mapping SourceColumn="datLessonDate" DataSetColumn="datLessonDate" />
+              <Mapping SourceColumn="txtTheme" DataSetColumn="txtTheme" />
+              <Mapping SourceColumn="intMarkValue" DataSetColumn="intMarkValue" />
+              <Mapping SourceColumn="txtMarkComment" DataSetColumn="txtMarkComment" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="report2DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="report2DataSet1" msprop:Generator_UserDSName="report2DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="txtPupilSurname" msprop:Generator_ColumnVarNameInTable="columntxtPupilSurname" msprop:Generator_ColumnPropNameInRow="txtPupilSurname" msprop:Generator_ColumnPropNameInTable="txtPupilSurnameColumn" msprop:Generator_UserColumnName="txtPupilSurname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="txtPupilName" msprop:Generator_ColumnVarNameInTable="columntxtPupilName" msprop:Generator_ColumnPropNameInRow="txtPupilName" msprop:Generator_ColumnPropNameInTable="txtPupilNameColumn" msprop:Generator_UserColumnName="txtPupilName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datBirthday" msprop:Generator_ColumnVarNameInTable="columndatBirthday" msprop:Generator_ColumnPropNameInRow="datBirthday" msprop:Generator_ColumnPropNameInTable="datBirthdayColumn" msprop:Generator_UserColumnName="datBirthday" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="txtAddress" msprop:Generator_ColumnVarNameInTable="columntxtAddress" msprop:Generator_ColumnPropNameInRow="txtAddress" msprop:Generator_ColumnPropNameInTable="txtAddressColumn" msprop:Generator_UserColumnName="txtAddress" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="txtSubjectName" msprop:Generator_ColumnVarNameInTable="columntxtSubjectName" msprop:Generator_ColumnPropNameInRow="txtSubjectName" msprop:Generator_ColumnPropNameInTable="txtSubjectNameColumn" msprop:Generator_UserColumnName="txtSubjectName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="txtTeacherName" msprop:Generator_ColumnVarNameInTable="columntxtTeacherName" msprop:Generator_ColumnPropNameInRow="txtTeacherName" msprop:Generator_ColumnPropNameInTable="txtTeacherNameColumn" msprop:Generator_UserColumnName="txtTeacherName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="intSubjectVolume" msprop:Generator_ColumnVarNameInTable="columnintSubjectVolume" msprop:Generator_ColumnPropNameInRow="intSubjectVolume" msprop:Generator_ColumnPropNameInTable="intSubjectVolumeColumn" msprop:Generator_UserColumnName="intSubjectVolume" type="xs:int" minOccurs="0" />
+              <xs:element name="datLessonDate" msprop:Generator_ColumnVarNameInTable="columndatLessonDate" msprop:Generator_ColumnPropNameInRow="datLessonDate" msprop:Generator_ColumnPropNameInTable="datLessonDateColumn" msprop:Generator_UserColumnName="datLessonDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="txtTheme" msprop:Generator_ColumnVarNameInTable="columntxtTheme" msprop:Generator_ColumnPropNameInRow="txtTheme" msprop:Generator_ColumnPropNameInTable="txtThemeColumn" msprop:Generator_UserColumnName="txtTheme" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="intMarkValue" msprop:Generator_ColumnVarNameInTable="columnintMarkValue" msprop:Generator_ColumnPropNameInRow="intMarkValue" msprop:Generator_ColumnPropNameInTable="intMarkValueColumn" msprop:Generator_UserColumnName="intMarkValue" type="xs:int" minOccurs="0" />
+              <xs:element name="txtMarkComment" msprop:Generator_ColumnVarNameInTable="columntxtMarkComment" msprop:Generator_ColumnPropNameInRow="txtMarkComment" msprop:Generator_ColumnPropNameInTable="txtMarkCommentColumn" msprop:Generator_UserColumnName="txtMarkComment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="report1DataSet" targetNamespace="http://tempuri.org/report1DataSet.xsd" xmlns:mstns="http://tempuri.org/report1DataSet.xsd" xmlns="http://tempuri.org/report1DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db22207ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db22207ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BD_6.Properties.Settings.GlobalReference.Default.db22207ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="db22207ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT tblTeacher.txtTeacherName, tblTeacher.intTeacherYear, tblTeacher.fltTeacherSalary, tblSubject.txtSubjectName, tblSubject.intSubjectVolume, tblSubject.intLessonCount
+FROM     tblTeacher INNER JOIN
+                  tblSubject ON tblTeacher.intTeacherId = tblSubject.intTeacherId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="txtTeacherName" DataSetColumn="txtTeacherName" />
+              <Mapping SourceColumn="intTeacherYear" DataSetColumn="intTeacherYear" />
+              <Mapping SourceColumn="fltTeacherSalary" DataSetColumn="fltTeacherSalary" />
+              <Mapping SourceColumn="txtSubjectName" DataSetColumn="txtSubjectName" />
+              <Mapping SourceColumn="intSubjectVolume" DataSetColumn="intSubjectVolume" />
+              <Mapping SourceColumn="intLessonCount" DataSetColumn="intLessonCount" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="report1DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="report1DataSet" msprop:Generator_UserDSName="report1DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="txtTeacherName" msprop:Generator_ColumnVarNameInTable="columntxtTeacherName" msprop:Generator_ColumnPropNameInRow="txtTeacherName" msprop:Generator_ColumnPropNameInTable="txtTeacherNameColumn" msprop:Generator_UserColumnName="txtTeacherName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="intTeacherYear" msprop:Generator_ColumnVarNameInTable="columnintTeacherYear" msprop:Generator_ColumnPropNameInRow="intTeacherYear" msprop:Generator_ColumnPropNameInTable="intTeacherYearColumn" msprop:Generator_UserColumnName="intTeacherYear" type="xs:int" minOccurs="0" />
+              <xs:element name="fltTeacherSalary" msprop:Generator_ColumnVarNameInTable="columnfltTeacherSalary" msprop:Generator_ColumnPropNameInRow="fltTeacherSalary" msprop:Generator_ColumnPropNameInTable="fltTeacherSalaryColumn" msprop:Generator_UserColumnName="fltTeacherSalary" type="xs:decimal" minOccurs="0" />
+              <xs:element name="txtSubjectName" msprop:Generator_ColumnVarNameInTable="columntxtSubjectName" msprop:Generator_ColumnPropNameInRow="txtSubjectName" msprop:Generator_ColumnPropNameInTable="txtSubjectNameColumn" msprop:Generator_UserColumnName="txtSubjectName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="intSubjectVolume" msprop:Generator_ColumnVarNameInTable="columnintSubjectVolume" msprop:Generator_ColumnPropNameInRow="intSubjectVolume" msprop:Generator_ColumnPropNameInTable="intSubjectVolumeColumn" msprop:Generator_UserColumnName="intSubjectVolume" type="xs:int" minOccurs="0" />
+              <xs:element name="intLessonCount" msprop:Generator_ColumnVarNameInTable="columnintLessonCount" msprop:Generator_ColumnPropNameInRow="intLessonCount" msprop:Generator_ColumnPropNameInTable="intLessonCountColumn" msprop:Generator_UserColumnName="intLessonCount" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
